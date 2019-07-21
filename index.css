@@ -1,0 +1,314 @@
+body {
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #e6ecf0;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.twitter {
+  display: inline;
+}
+
+.tweet__wrapper {
+  width: 530px;
+  min-height: 400px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  border: 1px solid rgb(228, 225, 225);
+  margin-bottom: 0.01px;
+}
+
+.tweet__wrapper:hover {
+  background-color: #f3f7fa;
+}
+
+.tweet__wrapper__user-profile {
+  flex: 1;
+  max-width: 80px;
+  min-height: 400px;
+}
+
+.tweet__wrapper__user-profile_picture {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.tweet__wrapper__content {
+  flex: 4;
+  margin: 5px;
+}
+
+.tweet__wrapper__content__user-name {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+.tweet__wrapper__content__tweet-shortinfo {
+  margin-right: 7px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tweet__wrapper__content__user-name__name {
+  margin-left: 2px;
+}
+
+.tweet__wrapper__content__user-name__name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #dd2e44;
+}
+
+.tweet__wrapper__content__user-name__badge {
+  height: 14px;
+  margin-left: 2px;
+}
+
+.tweet__wrapper__content__user-name__handler {
+  margin-left: 2px;
+  color: #657786;
+}
+
+.tweet__wrapper__content__user-name__separator::before {
+  margin-left: 1px;
+  content: "\00b7";
+}
+
+.tweet__wrapper__content__user-name__date {
+  margin-left: 2px;
+  color: #657786;
+}
+
+.tweet__wrapper__content__user-name__date:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tweet__wrapper__content__user-name__downarrow {
+  margin: 8px 0px 0px 8px;
+  height: 10px;
+  width: 14px;
+  float: right;
+}
+
+.tweet__wrapper__content__user-name__downarrow:hover {
+  cursor: pointer;
+}
+
+.tweet__wrapper__content__tweet-breifinfo {
+  margin-right: 7px;
+}
+
+.tweet__wrapper__content__tweet-breifinfo__upimg {
+  display: flex;
+  padding: 1px;
+  margin-top: 10px;
+}
+
+.tweet__wrapper__content__tweet-breifinfo__img1 {
+  height: 150px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.tweet__wrapper__content__tweet-breifinfo__img2 {
+  height: 150px;
+  width: 50%;
+  object-fit: cover;
+  padding-left: 2px;
+  border-radius: 0px 10px 0px 0px;
+  position: inherit;
+}
+
+.tweet__wrapper__content__tweet-breifinfo__img3 {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  padding: 1px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.tweet__wrapper__content__tweet-action {
+  display: flex;
+  color: #657786;
+  font-size: 16px;
+}
+
+button {
+  color: #657786;
+  font-size: 11px;
+  font-weight: 740;
+  position: relative;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.tweet__wrapper__content__tweet-action__reply-span {
+  margin-right: 20px;
+}
+
+.tweet__wrapper__content__tweet-action__retweet-span {
+  margin-right: 20px;
+}
+
+.tweet__wrapper__content__tweet-action__like-span {
+  margin-right: 29px;
+}
+
+.tweet__wrapper__content__tweet-action__direct-message-span {
+  margin-right: 20px;
+}
+
+.tweet__wrapper__content__tweet-action__reply-span__icon {
+  height: 21px;
+  width: 19px;
+  margin-right: 10px;
+}
+
+.tweet__wrapper__content__tweet-action__retweet-span__icon {
+  height: 21px;
+  width: 19px;
+  margin-right: 10px;
+}
+
+.tweet__wrapper__content__tweet-action__like-span__icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+
+.tweet__wrapper__content__tweet-action__direct-message-span__icon {
+  height: 18px;
+  width: 15px;
+}
+
+.tweet__wrapper__content__tweet-action__reply-span .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -50px;
+  margin-bottom: 2px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20) transparent transparent transparent;
+}
+
+.tweet__wrapper__content__tweet-action__reply-span:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tweet__wrapper__content__tweet-action__retweet-span .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -50px;
+  margin-bottom: 2px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20) transparent transparent transparent;
+}
+
+.tweet__wrapper__content__tweet-action__retweet-span:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tweet__wrapper__content__tweet-action__like-span .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -50px;
+  margin-bottom: 2px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20) transparent transparent transparent;
+}
+
+.tweet__wrapper__content__tweet-action__like-span:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tweet__wrapper__content__tweet-action__direct-message-span .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -50px;
+  margin-bottom: 2px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20) transparent transparent transparent;
+}
+
+.tweet__wrapper__content__tweet-action__direct-message-span:hover .tooltiptext {
+  visibility: visible;
+}
